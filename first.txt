@@ -1,0 +1,76 @@
+Components describe a part of the user interface
+they are re-usable & can be nested inside other Components
+  two types---
+    @ stateless functional Components ( normal javascript function & return JSX)
+    @ stateful class Components(extends component class & using render( inside we are using return ) )
+
+
+In functional Components
+   argument optionals as props & return JSX
+
+   export function Greet() {
+     return <h1>Harshit Shukla</h1>
+ } 
+   if we are using this way that time we need to write the same function name at time of import.....
+    otherwise we can change name at time of import 
+
+
+functional vs class Components
+
+functional components
+  Simple function
+  Absence of this Keyword
+  solution without using state
+  Mainly responsible for the UI
+  stateless
+ 
+class Components
+   More feature Rich
+   Maintain their own private data --- state
+   Complex UI Logic
+   provide lifecycle hooks
+
+  
+react hooks is implemented in 16.7.0...
+its use to set the state in functional components..
+& other react feacture add  
+
+
+
+javascript XML(JSX) -extension to the javascript language syntax
+JSX makes our react code simpler & elegant
+write html in javascript.
+JSX diffrences
+class - className
+for -- htmlfor
+follow camelCase rule
+
+
+props vs state
+-----------------
+
+props get passes to the Component
+function parameters
+props are immutable
+props -- functional Component
+this.props -- class components
+
+
+state
+------------------
+state is managed with in the Component
+variables declared in the function body
+state can be changed
+useStateHook --- Functional Components
+this.state ------ class Components
+
+
+About  setState
+Always make use of setState and never modify the state directly.
+
+code has to be executed after the state has been updated ? place that code in yhe call 
+back function which is second argument to the setState
+
+when you have to update state based on the previous state value, pass in a function as an argument instead 
+of regular object
+

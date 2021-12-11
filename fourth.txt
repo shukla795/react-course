@@ -1,0 +1,100 @@
+Redux---
+  redux is a predictable state container for javascript apps... 
+   Manage the state in a predictable way that time redux will help you.
+
+ 1- redux is for javascript applications--
+     Redux is not teid with react.
+     can we used with Angular , vue , react & even vanilla javascript...    
+     Redux is an Library for javascript applications.
+
+ 2-redux is for state container
+    redux will store & Manage the applications state
+    state of an app is the represented by all the individual components of the app.
+
+ 3- redux is for predictable way..
+    In redux all state transition are explicit and it is possible to keep track of them.
+    the changes to your applications state become predictable.
+
+   redux in react..
+    redux 1.0 came in react in august 2015. redux replace by hooks(useReducer+useContext)...
+     but redux  have different advantage to use this... not 100% replace by hooks...
+
+    if we want to share state one component to another component. that time in redux we get that state by redux way & share that need component.
+  
+   React-redux is the official library.Redux UI binding library for react... 
+
+   Three core concept... 
+      A store that holds the state of an applications.
+      An action that describe the changes in the state of the applications.
+      A reducer which actually carries out the state transition depending on the action.. 
+
+  Three principle...
+    first principle...
+      'The state of your whole applications is stored in an object tree with in a single store.'
+       Maintain our application state in a single object which would be managed by redux store
+        
+     {
+         numberofcakes:10
+     }
+
+    Second principle
+      The only way to change the state is to emit an action.an object describeing what happened.
+
+     {
+         type : Buy_Cake
+     }
+
+     Third principle...
+       To specify how the state tree is transformed by actions , you write pure reducer...
+       reducer = (state , action) = newState.
+   
+  Action----
+    the only way your application can interact with the store
+    have a type property that indicates the types of action being performed.
+  
+  reducer---    
+     specify how the app's state changes in response to actions sent to the store 
+
+  redux store---
+      one store for entire application
+      responsibilities...
+        hold application state
+        allow access to state via getState()
+        allow state to be updated via dispatch(action)
+        Registers listeners via subscribe(listener)
+        handling unregistering of listener via the function return via the subscribe(listener)
+
+
+MiddleWare----
+   MiddleWare is  suggested way Redux with custom functionality.
+   provides a third party extension point between , dispatching an action & moment it reaches the reducer.
+   use for logging , crash reporting , performing asynchronous tasks.
+     
+ React-redux-- start    
+ use hooks instead of connect()
+
+ useSelector() hooks is a way to access the all state from react-redux store. it is the closest to mapStateToProps
+ useDispatch() return the refrence of an dispatch() from redux-store 
+ 
+ before Hooks topic----
+
+ Higher order component
+  need   ----- To share common logic between components...
+
+  what--
+   A pattern where a function takes a component as an argument & return the new component
+
+   const newCOmponent = HOC(originalComponent)
+   we pass the props from the hoc not to the wrapper component.. but we want to pass from wrapper component that time we need to define ... operator
+    with props in hoc
+    we can set parameter also
+
+  Render props---
+     share code between component.
+     the term render props refers to a techniqe for sahring code between component using a prop whose value is a function.
+
+
+   HTTP Library---
+     react component is used for get props & states & render the UI . but we need to get the data from the server & send the request this time
+     we need HTTP Library....
+     In HTTP Library we using most popular package that is axios...

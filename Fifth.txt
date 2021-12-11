@@ -1,0 +1,51 @@
+In react render - components are translated into elements & getmounted to the DOM..
+ react docuement is split in to two parts --- 
+ 1- render phase 2- commit phase
+
+  1- this is Initial render way
+
+   in react start with root component of the tree & goes downwards to that leaf component,
+   while travesing  react invokes in each component createElement method & converted react component into createElement method.
+    react elements is a javaScript object that define the structure of the UI.
+
+    when all component have converted into elements then all react elements goes to commit phase 
+     In commit phase all elements use in DOM.
+
+2- now rerender to update the UI
+    while traversing root to downwards set the flags to that component who needs to be update.
+    by calling the useState & useReducer function.
+    all flaged component converted into JSX elements & after rerender
+      new render compare to be last render & after this saves the changes.& hand over to the commit phase & goes DOM
+
+   The commit phase is usually very fast . but rendering can be slow.
+   useless render remove by memo. if changes then update other wise performance slow down....
+
+ useState---
+   after the render time if state value is same that time component render only one more time .
+   &  initial time if state value is same that time component will not rerender      
+
+   useReducer---
+   after the render time if state value is same that time component render only one more time .
+   &  initial time if state value is same that time component will not rerender    
+
+
+   StateImutabllity---
+     we need to specify the spread operator with object & Array.
+
+   parent child
+     if new state is different from old state that time parent & child component rerender & render
+     if value not change 
+      1- after initial render ---- no parent no child component render
+      2- after rerender way --- only parent render no  child render...
+
+
+   same element refrence
+     In React ,when a parent component rerender then React will recursively render all its child component.
+     "unnessary renders" where the child component goes through the render phase but not to the commit phase..
+     you can extract the expensive child component & instead pass it down as props to the parent component.
+
+     when state change of component & props not change that time react will automatically optimize this ..
+      parent component state change that time parent rerender but not child component rerender. because child component have same time refrence... props
+
+
+         

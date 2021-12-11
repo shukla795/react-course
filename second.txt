@@ -1,0 +1,94 @@
+1-
+if(this.state.isLoggedIN){
+  return <div>welcome harshit</div>
+}else{
+    return <div>welcome guest</div>
+}
+  in JSX if-else is not valid
+
+2-
+ let message
+ if(this.state.isLoggedIN){
+   message = <div>welcome harshit</div>
+ }else{
+   message = <div>welocme guest</div>  
+ }
+ return <div>{message}</div>
+
+3-
+ this.state.isLoggedIN ? <div>welcome harshit</div> : <div>welcome guest</div>
+4-
+this.state.isLoggedIN && <div>welcome harshit</div> 
+#####################################################
+  ---get input value---
+
+   constructor(){
+     super();
+     this.state={
+       username : ''
+     }
+   }
+   
+   handleusername(event){
+      this.setState({
+        username:event.target.value
+      })
+   }
+
+  <label>username</label>
+   <input 
+    type="text"
+    value="this.state.username" 
+    onChange={this.handleusername.bind(this)} />
+################################################################
+
+
+    Lifecycle Methods
+ 1-Mounting -- when an instance of a component is being created & inserted in the DOM.
+ 2-updating -- when a component is being re-rendered as a result of changes either props or state
+ 3-unmounting -- when a component is being removed from DOM.
+ 4-error -- when there is an error during re-rendering , in a Lifecycle method...   
+
+Mounting method == follow this order of execution
+  constructor
+  static getDerivedStateFromProps
+  render
+  componentDidMount()
+
+updating methods == follow this order of execution
+  Static getDerivedStateFromProps
+  shouldComponentUpdate
+  render
+  getSnapshotBeforeUpdate
+  componentDidUpdate
+
+unmounting ==
+    componentWillMount
+
+Error Handling ==
+    static getDerivedStateFromError
+    componentDidCatch
+########################################
+   Regular Component doest not implements shouldComponentUpdate 
+ PURE component####
+
+   1-We can create a component extending the PureComponenet Class...
+   2- A pureComponent implements the shouldComponentUpdate Lifecycle
+   method by follow the shallow comparison on the props & state of the component
+
+   3- if there is no difference , the component is not re-rendered -- performance boost
+   4 -it is  a good idea to ensure that all the children are pure & behave pure component 
+   behaviour
+
+   5-Never mutate the state . Always return the new state
+ 
+
+shallow comparsion --- ( primitive types(Number String & boolean) -- value & data type same)
+  complex type --- (object & array refrence types comapare)
+
+  Refs are used to provide the focus & fetch value to our input fields (DOM nodes)
+
+
+
+
+

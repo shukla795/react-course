@@ -1,0 +1,49 @@
+what is react?
+  open source javascript library for building user interface.
+  not a framework
+  focus on UI
+  Rich ecosystem library
+
+  react is created & mainted by facebook
+  huge community
+
+  raect is Component based Architecture
+   reusable code 
+   react is declaractive
+
+   we need to install two things
+    nodejs
+    visualStdio code
+
+    in npm install app globally
+    after this create-react-app
+    
+    npm insatll create-react-g
+    craete-react-app <project name>
+
+
+    In npx we dont need to install app
+      
+      npx create-react-app<project-name>
+     npm package runner
+
+
+     package.json conatins required dependencies & scripts for our projects.
+     package-lock.json simply ensure consistent installations of your dependencies.& you dont have to worry about anything.
+     In node-modules all dependencies installed here.
+     it is generated when run create-react-app
+
+
+     public --
+      mainfest.json -- for use web progressive apps
+      index.html ---   here one  single html page & change it dynamically & change only in title not in body tag
+    src 
+      index.js -- is the start file in src folder
+      in index.js defines Components &  Components data show in root id.....
+      in component we are using JSX.. & CSS & also use custom Components
+
+    control---
+      index.html ---> index.js--> use Components line wise....
+
+      
+
